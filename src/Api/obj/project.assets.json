@@ -2,21 +2,20 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Elmah.Io.AspNetCore/3.11.17": {
+      "Elmah.Io.AspNetCore.ExtensionsLogging/3.9.12": {
         "type": "package",
         "dependencies": {
-          "Elmah.Io.Client": "[3.10.10, 4.0.0)",
           "Microsoft.AspNetCore.Http": "2.1.0",
-          "Microsoft.Extensions.Hosting": "2.1.0"
+          "Microsoft.Extensions.Logging": "2.1.0"
         },
         "compile": {
-          "lib/netstandard2.0/Elmah.Io.AspNetCore.dll": {}
+          "lib/netstandard2.0/Elmah.Io.AspNetCore.ExtensionsLogging.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Elmah.Io.AspNetCore.dll": {}
+          "lib/netstandard2.0/Elmah.Io.AspNetCore.ExtensionsLogging.dll": {}
         }
       },
-      "Elmah.Io.Client/3.10.10": {
+      "Elmah.Io.Client/3.11.11-pre": {
         "type": "package",
         "dependencies": {
           "Microsoft.Rest.ClientRuntime": "2.3.21"
@@ -26,6 +25,44 @@
         },
         "runtime": {
           "lib/netstandard2.0/Elmah.Io.Client.dll": {}
+        }
+      },
+      "Elmah.Io.Extensions.Logging/3.9.12": {
+        "type": "package",
+        "dependencies": {
+          "Elmah.Io.Client": "[3.10.10, 4.0.0)",
+          "Microsoft.Extensions.Logging": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Elmah.Io.Extensions.Logging.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Elmah.Io.Extensions.Logging.dll": {}
+        }
+      },
+      "Microsoft.AspNet.WebApi.Client/5.2.7": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.1",
+          "Newtonsoft.Json.Bson": "1.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Net.Http.Formatting.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Net.Http.Formatting.dll": {}
+        }
+      },
+      "Microsoft.AspNet.WebApi.Core/5.2.7": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.WebApi.Client": "5.2.7"
+        },
+        "compile": {
+          "lib/net45/System.Web.Http.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Web.Http.dll": {}
         }
       },
       "Microsoft.AspNetCore.Http/2.1.0": {
@@ -408,6 +445,19 @@
         },
         "runtime": {
           "lib/netstandard1.3/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Newtonsoft.Json.Bson/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "10.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -1701,32 +1751,47 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
+      },
+      "Elmah.Io.AspNetCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Elmah.Io.Client": "[3.11.11-pre, 4.0.0)",
+          "Microsoft.AspNetCore.Http": "2.1.0",
+          "Microsoft.Extensions.Hosting": "2.1.0"
+        },
+        "compile": {
+          "bin/placeholder/Elmah.Io.AspNetCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Elmah.Io.AspNetCore.dll": {}
+        }
       }
     }
   },
   "libraries": {
-    "Elmah.Io.AspNetCore/3.11.17": {
-      "sha512": "pJ/5FGuP5mqBjhlHqnK8KbHTmTVas3+SJn+q5gs7dihlJCsf5v+t7kYOmvlndrsGmS12JUNOJV3Y0nGisB3Smw==",
+    "Elmah.Io.AspNetCore.ExtensionsLogging/3.9.12": {
+      "sha512": "ZDqd98Nn5BSqyJHLXzJ/UtKFDXxNv5drlIFo7pFqy4Siju4/37IQ6fhqdbMDeP7x6bZQC5ewIue3FO3Jh0dY/g==",
       "type": "package",
-      "path": "elmah.io.aspnetcore/3.11.17",
+      "path": "elmah.io.aspnetcore.extensionslogging/3.9.12",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "elmah.io.aspnetcore.3.11.17.nupkg.sha512",
-        "elmah.io.aspnetcore.nuspec",
+        "elmah.io.aspnetcore.extensionslogging.3.9.12.nupkg.sha512",
+        "elmah.io.aspnetcore.extensionslogging.nuspec",
         "icon.png",
-        "lib/netstandard2.0/Elmah.Io.AspNetCore.dll",
-        "lib/netstandard2.0/Elmah.Io.AspNetCore.xml"
+        "lib/netstandard2.0/Elmah.Io.AspNetCore.ExtensionsLogging.dll",
+        "lib/netstandard2.0/Elmah.Io.AspNetCore.ExtensionsLogging.xml"
       ]
     },
-    "Elmah.Io.Client/3.10.10": {
-      "sha512": "tBijnDYboo/SaDHtIKBtcIytLpi8aM4AKhSOAtBbOXAZmIGJWPUrAdq18T3KI0KDLJNrdbucOoIiFPrZ14n++g==",
+    "Elmah.Io.Client/3.11.11-pre": {
+      "sha512": "NlGoRrWvoURvGrd341Y8RYg1yuwoIOnHfIaHl9YPnldnVmVTJ1ELEdHvrGngO0YIGoJ22LsM9EN31gKOqatH+Q==",
       "type": "package",
-      "path": "elmah.io.client/3.10.10",
+      "path": "elmah.io.client/3.11.11-pre",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "elmah.io.client.3.10.10.nupkg.sha512",
+        "elmah.io.client.3.11.11-pre.nupkg.sha512",
         "elmah.io.client.nuspec",
         "icon.png",
         "lib/net45/Elmah.Io.Client.dll",
@@ -1741,6 +1806,51 @@
         "lib/netstandard1.4/Elmah.Io.Client.xml",
         "lib/netstandard2.0/Elmah.Io.Client.dll",
         "lib/netstandard2.0/Elmah.Io.Client.xml"
+      ]
+    },
+    "Elmah.Io.Extensions.Logging/3.9.12": {
+      "sha512": "YWqc+sn/IbarsAA1sFp9TlaC0Ne8Ik9bgs+CnGtOw3d1WbS8at7D+4yWrqePsZWpmOrVrm0D9SCEZ14Paqg2uw==",
+      "type": "package",
+      "path": "elmah.io.extensions.logging/3.9.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "elmah.io.extensions.logging.3.9.12.nupkg.sha512",
+        "elmah.io.extensions.logging.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/Elmah.Io.Extensions.Logging.dll",
+        "lib/netstandard2.0/Elmah.Io.Extensions.Logging.xml"
+      ]
+    },
+    "Microsoft.AspNet.WebApi.Client/5.2.7": {
+      "sha512": "/76fAHknzvFqbznS6Uj2sOyE9rJB3PltY+f53TH8dX9RiGhk02EhuFCWljSj5nnqKaTsmma8DFR50OGyQ4yJ1g==",
+      "type": "package",
+      "path": "microsoft.aspnet.webapi.client/5.2.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/System.Net.Http.Formatting.dll",
+        "lib/net45/System.Net.Http.Formatting.xml",
+        "lib/netstandard2.0/System.Net.Http.Formatting.dll",
+        "lib/netstandard2.0/System.Net.Http.Formatting.xml",
+        "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll",
+        "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.xml",
+        "microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
+        "microsoft.aspnet.webapi.client.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.WebApi.Core/5.2.7": {
+      "sha512": "gM2QzApnHdy1FbKUJ/ROGJSm69P2G+HMoVd/t5Vq1O/zZ5TI4IKC9PX6nUfRt/NHgebZOIWHpB4/4K4inuy4yQ==",
+      "type": "package",
+      "path": "microsoft.aspnet.webapi.core/5.2.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/web.config.transform",
+        "lib/net45/System.Web.Http.dll",
+        "lib/net45/System.Web.Http.xml",
+        "microsoft.aspnet.webapi.core.5.2.7.nupkg.sha512",
+        "microsoft.aspnet.webapi.core.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Http/2.1.0": {
@@ -2190,6 +2300,21 @@
         "newtonsoft.json.10.0.3.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "tools/install.ps1"
+      ]
+    },
+    "Newtonsoft.Json.Bson/1.0.1": {
+      "sha512": "5PYT/IqQ+UK31AmZiSS102R6EsTo+LGTSI8bp7WAUqDKaF4wHXD8U9u4WxTI1vc64tYi++8p3dk3WWNqPFgldw==",
+      "type": "package",
+      "path": "newtonsoft.json.bson/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Newtonsoft.Json.Bson.dll",
+        "lib/net45/Newtonsoft.Json.Bson.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.Bson.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.Bson.xml",
+        "newtonsoft.json.bson.1.0.1.nupkg.sha512",
+        "newtonsoft.json.bson.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -5845,15 +5970,23 @@
         "system.xml.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xmldocument.nuspec"
       ]
+    },
+    "Elmah.Io.AspNetCore/1.0.0": {
+      "type": "project",
+      "path": "../Elmah.Io.AspNetCore/Elmah.Io.AspNetCore.csproj",
+      "msbuildProject": "../Elmah.Io.AspNetCore/Elmah.Io.AspNetCore.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Elmah.Io.AspNetCore >= 3.11.17"
+      "Elmah.Io.AspNetCore >= 1.0.0",
+      "Elmah.Io.AspNetCore.ExtensionsLogging >= 3.9.12",
+      "Elmah.Io.Extensions.Logging >= 3.9.12",
+      "Microsoft.AspNet.WebApi.Core >= 5.2.7"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Estudos\\.nuget\\packages\\": {},
+    "C:\\Users\\bruno.barreto\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -5862,14 +5995,14 @@
       "projectUniqueName": "D:\\GitPessoal\\AspNetCore.Elmah.io\\src\\Api\\Api.csproj",
       "projectName": "Api",
       "projectPath": "D:\\GitPessoal\\AspNetCore.Elmah.io\\src\\Api\\Api.csproj",
-      "packagesPath": "C:\\Users\\Estudos\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\bruno.barreto\\.nuget\\packages\\",
       "outputPath": "D:\\GitPessoal\\AspNetCore.Elmah.io\\src\\Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Estudos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bruno.barreto\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5882,7 +6015,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\GitPessoal\\AspNetCore.Elmah.io\\src\\Elmah.Io.AspNetCore\\Elmah.Io.AspNetCore.csproj": {
+              "projectPath": "D:\\GitPessoal\\AspNetCore.Elmah.io\\src\\Elmah.Io.AspNetCore\\Elmah.Io.AspNetCore.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -5895,9 +6032,17 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
-          "Elmah.Io.AspNetCore": {
+          "Elmah.Io.AspNetCore.ExtensionsLogging": {
             "target": "Package",
-            "version": "[3.11.17, )"
+            "version": "[3.9.12, )"
+          },
+          "Elmah.Io.Extensions.Logging": {
+            "target": "Package",
+            "version": "[3.9.12, )"
+          },
+          "Microsoft.AspNet.WebApi.Core": {
+            "target": "Package",
+            "version": "[5.2.7, )"
           }
         },
         "imports": [
@@ -5921,5 +6066,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.WebApi.Core 5.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.WebApi.Core",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

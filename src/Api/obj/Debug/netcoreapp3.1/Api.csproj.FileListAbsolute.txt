@@ -23,3 +23,9 @@ D:\GitPessoal\AspNetCore.Elmah.io\src\Api\obj\Debug\netcoreapp3.1\Api.csproj.Cop
 D:\GitPessoal\AspNetCore.Elmah.io\src\Api\obj\Debug\netcoreapp3.1\Api.dll
 D:\GitPessoal\AspNetCore.Elmah.io\src\Api\obj\Debug\netcoreapp3.1\Api.pdb
 D:\GitPessoal\AspNetCore.Elmah.io\src\Api\obj\Debug\netcoreapp3.1\Api.genruntimeconfig.cache
+D:\GitPessoal\AspNetCore.Elmah.io\src\Api\bin\Debug\netcoreapp3.1\Elmah.Io.AspNetCore.ExtensionsLogging.dll
+D:\GitPessoal\AspNetCore.Elmah.io\src\Api\bin\Debug\netcoreapp3.1\Elmah.Io.Extensions.Logging.dll
+D:\GitPessoal\AspNetCore.Elmah.io\src\Api\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+D:\GitPessoal\AspNetCore.Elmah.io\src\Api\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+D:\GitPessoal\AspNetCore.Elmah.io\src\Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\GitPessoal\AspNetCore.Elmah.io\src\Api\bin\Debug\netcoreapp3.1\Elmah.Io.AspNetCore.xml

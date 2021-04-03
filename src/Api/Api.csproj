@@ -5,7 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Elmah.Io.AspNetCore" Version="3.11.17" />
+    <PackageReference Include="Elmah.Io.AspNetCore.ExtensionsLogging" Version="3.9.12" />
+    <PackageReference Include="Elmah.Io.Extensions.Logging" Version="3.9.12" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+    <Folder Include="Middleware\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Elmah.Io.AspNetCore\Elmah.Io.AspNetCore.csproj" />
   </ItemGroup>
 
 

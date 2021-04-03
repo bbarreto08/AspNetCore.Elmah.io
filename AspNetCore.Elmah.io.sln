@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "src\Api\Api.csproj", "{A1C9F07D-A14C-4A03-9870-24732E5BD21B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "src\Api\Api.csproj", "{A1C9F07D-A14C-4A03-9870-24732E5BD21B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elmah.Io.AspNetCore", "src\Elmah.Io.AspNetCore\Elmah.Io.AspNetCore.csproj", "{29317016-4D50-4339-B6D5-87980D99CD84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A1C9F07D-A14C-4A03-9870-24732E5BD21B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1C9F07D-A14C-4A03-9870-24732E5BD21B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1C9F07D-A14C-4A03-9870-24732E5BD21B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29317016-4D50-4339-B6D5-87980D99CD84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29317016-4D50-4339-B6D5-87980D99CD84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29317016-4D50-4339-B6D5-87980D99CD84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29317016-4D50-4339-B6D5-87980D99CD84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

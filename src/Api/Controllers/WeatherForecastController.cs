@@ -9,7 +9,7 @@ namespace Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class WeatherForecastController : BaseController
     {
         private static readonly string[] Summaries = new[]
         {
@@ -17,16 +17,20 @@ namespace Api.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
-
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public IEnumerable<WeatherForecast> Get([FromQuery] int number)
         {
-            throw new Exception("Configuração finalizada");
+            //_logger.LogInformation("Log de informação");
+            //_logger.LogWarning("Log de warning");
+            //_logger.LogError("Log de erro");
+            //_logger.LogDebug("Log de debug");
+
+            throw new IndexOutOfRangeException();
 
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
@@ -41,6 +45,7 @@ namespace Api.Controllers
         [HttpPost]
         public IEnumerable<WeatherForecast> Post([FromBody] WeatherForecast weatherForecast)
         {
+            _logger.LogTrace("Acesso ao POST");
             throw new Exception("Logando dados do request");
 
             var rng = new Random();

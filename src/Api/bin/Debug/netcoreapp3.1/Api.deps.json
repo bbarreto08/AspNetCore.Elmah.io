@@ -24,7 +24,10 @@
     ".NETCoreApp,Version=v3.1": {
       "Api/1.0.0": {
         "dependencies": {
-          "Elmah.Io.AspNetCore": "3.11.17",
+          "Elmah.Io.AspNetCore": "1.0.0",
+          "Elmah.Io.AspNetCore.ExtensionsLogging": "3.9.12",
+          "Elmah.Io.Extensions.Logging": "3.9.12",
+          "Microsoft.AspNet.WebApi.Core": "5.2.7",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -315,34 +318,77 @@
           "Api.dll": {}
         }
       },
-      "Elmah.Io.AspNetCore/3.11.17": {
+      "Elmah.Io.AspNetCore.ExtensionsLogging/3.9.12": {
         "dependencies": {
-          "Elmah.Io.Client": "3.10.10",
           "Microsoft.AspNetCore.Http": "2.1.0",
-          "Microsoft.Extensions.Hosting": "2.1.0"
+          "Microsoft.Extensions.Logging": "2.1.0"
         },
         "runtime": {
-          "lib/netstandard2.0/Elmah.Io.AspNetCore.dll": {
-            "assemblyVersion": "3.11.17.0",
-            "fileVersion": "3.11.17.0"
+          "lib/netstandard2.0/Elmah.Io.AspNetCore.ExtensionsLogging.dll": {
+            "assemblyVersion": "3.9.12.0",
+            "fileVersion": "3.9.12.0"
           }
         },
         "compile": {
-          "lib/netstandard2.0/Elmah.Io.AspNetCore.dll": {}
+          "lib/netstandard2.0/Elmah.Io.AspNetCore.ExtensionsLogging.dll": {}
         }
       },
-      "Elmah.Io.Client/3.10.10": {
+      "Elmah.Io.Client/3.11.11-pre": {
         "dependencies": {
           "Microsoft.Rest.ClientRuntime": "2.3.21"
         },
         "runtime": {
           "lib/netstandard2.0/Elmah.Io.Client.dll": {
-            "assemblyVersion": "3.10.10.0",
-            "fileVersion": "3.10.10.0"
+            "assemblyVersion": "3.11.11.0",
+            "fileVersion": "3.11.11.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/Elmah.Io.Client.dll": {}
+        }
+      },
+      "Elmah.Io.Extensions.Logging/3.9.12": {
+        "dependencies": {
+          "Elmah.Io.Client": "3.11.11-pre",
+          "Microsoft.Extensions.Logging": "2.1.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Elmah.Io.Extensions.Logging.dll": {
+            "assemblyVersion": "3.9.12.0",
+            "fileVersion": "3.9.12.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Elmah.Io.Extensions.Logging.dll": {}
+        }
+      },
+      "Microsoft.AspNet.WebApi.Client/5.2.7": {
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3",
+          "Newtonsoft.Json.Bson": "1.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Net.Http.Formatting.dll": {
+            "assemblyVersion": "5.2.7.0",
+            "fileVersion": "5.2.61128.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Net.Http.Formatting.dll": {}
+        }
+      },
+      "Microsoft.AspNet.WebApi.Core/5.2.7": {
+        "dependencies": {
+          "Microsoft.AspNet.WebApi.Client": "5.2.7"
+        },
+        "runtime": {
+          "lib/net45/System.Web.Http.dll": {
+            "assemblyVersion": "5.2.7.0",
+            "fileVersion": "5.2.61128.0"
+          }
+        },
+        "compile": {
+          "lib/net45/System.Web.Http.dll": {}
         }
       },
       "Microsoft.AspNetCore.Http/2.1.0": {
@@ -557,6 +603,21 @@
         },
         "compile": {
           "lib/netstandard1.3/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Newtonsoft.Json.Bson/1.0.1": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.1.20722"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -1260,6 +1321,19 @@
           "System.Text.Encoding": "4.3.0",
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0"
+        }
+      },
+      "Elmah.Io.AspNetCore/1.0.0": {
+        "dependencies": {
+          "Elmah.Io.Client": "3.11.11-pre",
+          "Microsoft.AspNetCore.Http": "2.1.0",
+          "Microsoft.Extensions.Hosting": "2.1.0"
+        },
+        "runtime": {
+          "Elmah.Io.AspNetCore.dll": {}
+        },
+        "compile": {
+          "Elmah.Io.AspNetCore.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -2962,19 +3036,40 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Elmah.Io.AspNetCore/3.11.17": {
+    "Elmah.Io.AspNetCore.ExtensionsLogging/3.9.12": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-pJ/5FGuP5mqBjhlHqnK8KbHTmTVas3+SJn+q5gs7dihlJCsf5v+t7kYOmvlndrsGmS12JUNOJV3Y0nGisB3Smw==",
-      "path": "elmah.io.aspnetcore/3.11.17",
-      "hashPath": "elmah.io.aspnetcore.3.11.17.nupkg.sha512"
+      "sha512": "sha512-ZDqd98Nn5BSqyJHLXzJ/UtKFDXxNv5drlIFo7pFqy4Siju4/37IQ6fhqdbMDeP7x6bZQC5ewIue3FO3Jh0dY/g==",
+      "path": "elmah.io.aspnetcore.extensionslogging/3.9.12",
+      "hashPath": "elmah.io.aspnetcore.extensionslogging.3.9.12.nupkg.sha512"
     },
-    "Elmah.Io.Client/3.10.10": {
+    "Elmah.Io.Client/3.11.11-pre": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-tBijnDYboo/SaDHtIKBtcIytLpi8aM4AKhSOAtBbOXAZmIGJWPUrAdq18T3KI0KDLJNrdbucOoIiFPrZ14n++g==",
-      "path": "elmah.io.client/3.10.10",
-      "hashPath": "elmah.io.client.3.10.10.nupkg.sha512"
+      "sha512": "sha512-NlGoRrWvoURvGrd341Y8RYg1yuwoIOnHfIaHl9YPnldnVmVTJ1ELEdHvrGngO0YIGoJ22LsM9EN31gKOqatH+Q==",
+      "path": "elmah.io.client/3.11.11-pre",
+      "hashPath": "elmah.io.client.3.11.11-pre.nupkg.sha512"
+    },
+    "Elmah.Io.Extensions.Logging/3.9.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YWqc+sn/IbarsAA1sFp9TlaC0Ne8Ik9bgs+CnGtOw3d1WbS8at7D+4yWrqePsZWpmOrVrm0D9SCEZ14Paqg2uw==",
+      "path": "elmah.io.extensions.logging/3.9.12",
+      "hashPath": "elmah.io.extensions.logging.3.9.12.nupkg.sha512"
+    },
+    "Microsoft.AspNet.WebApi.Client/5.2.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/76fAHknzvFqbznS6Uj2sOyE9rJB3PltY+f53TH8dX9RiGhk02EhuFCWljSj5nnqKaTsmma8DFR50OGyQ4yJ1g==",
+      "path": "microsoft.aspnet.webapi.client/5.2.7",
+      "hashPath": "microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512"
+    },
+    "Microsoft.AspNet.WebApi.Core/5.2.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gM2QzApnHdy1FbKUJ/ROGJSm69P2G+HMoVd/t5Vq1O/zZ5TI4IKC9PX6nUfRt/NHgebZOIWHpB4/4K4inuy4yQ==",
+      "path": "microsoft.aspnet.webapi.core/5.2.7",
+      "hashPath": "microsoft.aspnet.webapi.core.5.2.7.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Http/2.1.0": {
       "type": "package",
@@ -3164,6 +3259,13 @@
       "sha512": "sha512-hSXaFmh7hNCuEoC4XNY5DrRkLDzYHqPx/Ik23R4J86Z7PE/Y6YidhG602dFVdLBRSdG6xp9NabH3dXpcoxWvww==",
       "path": "newtonsoft.json/10.0.3",
       "hashPath": "newtonsoft.json.10.0.3.nupkg.sha512"
+    },
+    "Newtonsoft.Json.Bson/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5PYT/IqQ+UK31AmZiSS102R6EsTo+LGTSI8bp7WAUqDKaF4wHXD8U9u4WxTI1vc64tYi++8p3dk3WWNqPFgldw==",
+      "path": "newtonsoft.json.bson/1.0.1",
+      "hashPath": "newtonsoft.json.bson.1.0.1.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
@@ -3731,6 +3833,11 @@
       "sha512": "sha512-lJ8AxvkX7GQxpC6GFCeBj8ThYVyQczx2+f/cWHJU8tjS7YfI6Cv6bon70jVEgs2CiFbmmM8b9j1oZVx0dSI2Ww==",
       "path": "system.xml.xmldocument/4.3.0",
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
+    },
+    "Elmah.Io.AspNetCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
       "type": "referenceassembly",
